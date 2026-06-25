@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #0F172A;
+  --color-dark-card: #1E293B;
+  --color-dark-text: #F8FAFC;
+  --color-primary: #6366F1;
+  --color-primary-glow: #818CF8;
+  --color-accent: #EC4899;
+  --color-accent-glow: #F472B6;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-dark-text font-sans antialiased selection:bg-primary selection:text-white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-dark-card/60 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  .glass-hover {
+    @apply hover:bg-dark-card/80 hover:border-primary/50 transition-all duration-300;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-glow to-accent-glow;
+  }
+}
