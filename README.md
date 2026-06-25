@@ -60,21 +60,20 @@ TaskPilot AI relies on a modern, high-performance web development stack:
 ## 📂 Project Structure
 
 ```bash
-├── src/
+├── public/               # Static assets, icons, and logo assets
+├── src/                  # Application source code
 │   ├── components/       # Reusable UI controls, layout cards, and navigation bars
 │   │   └── UI/           # Animated buttons, gradient typography, and custom panels
-│   ├── contexts/         # React Context State Engine
-│   │   ├── AuthContext   # Bypassed Auth state & Google Popups
-│   │   └── TaskContext   # Dynamic risk calculus, Firestore sync, and LocalStorage
-│   ├── pages/            # Application views (Dashboard, Login, Analytics)
-│   ├── services/         # Firebase app configuration
+│   ├── contexts/         # React Context State Engine (TaskContext, AuthContext)
+│   ├── pages/            # View components (Dashboard, Login, Analytics)
+│   ├── services/         # Firebase app configuration integrations
 │   ├── types.ts          # Strongly-typed Task, User, and Risk state models
-│   ├── index.css         # Tailwind directives & Custom theme definitions
-│   └── main.tsx          # Client-side entrypoint
-├── firebase-blueprint.json # NoSQL Firestore Schema Definitions
-├── firestore.rules       # Granular collection-level write permissions
-├── package.json          # Dependency configurations and build scripts
-└── server.ts             # Express server entry point for full-stack runs
+│   ├── index.css         # Tailwind CSS directives & Custom theme definitions
+│   └── main.tsx          # Client-side mounting entrypoint
+├── README.md             # Project documentation and developer guidelines
+├── index.html            # Main SPA HTML structure template
+├── tailwind.config.js    # Tailwind CSS configuration and design theme extensions
+└── vite.config.ts        # Vite execution, building, and alias configurations
 ```
 
 ---
